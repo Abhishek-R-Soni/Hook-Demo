@@ -1,6 +1,6 @@
 // using useState of hook
 
-import React,  { useState } from 'react';
+import React,  { useState, useEffect } from 'react';
 
 // function component
 const Student = () => {
@@ -9,9 +9,13 @@ const Student = () => {
 
   const updateData = () => {
     setName("Dhimant")
-    roll[1](1111)
+    roll[1](roll[0] + 1)
   }
   
+  useEffect(() => {
+      console.log('Effect Called...')
+  },[roll])
+
   return (
             <div>
               <h1>Welcome Again,</h1>
